@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#24543c" />
+    <meta name="description" content="CaloCoach — your friendly daily calorie budget and nutrition coach." />
+    <title>CaloCoach — your food, made simpler</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div id="app" class="app-shell">
+      <aside class="sidebar" id="sidebar" aria-label="Main navigation">
+        <div class="brand-lockup">
+          <div class="brand-mark" aria-hidden="true"><span></span><span></span><span></span></div>
+          <span class="brand-name">Calo<span>Coach</span></span>
+        </div>
+
+        <div class="sidebar-section-label">YOUR SPACE</div>
+        <nav class="side-nav">
+          <button class="nav-item active" data-view="home"><span class="nav-icon" data-icon="home"></span><span>Home</span></button>
+          <button class="nav-item" data-view="diary"><span class="nav-icon" data-icon="book-open"></span><span>Daily diary</span><span class="nav-badge" id="diary-count">3</span></button>
+          <button class="nav-item" data-view="coach"><span class="nav-icon" data-icon="sparkles"></span><span>AI Coach</span><span class="new-dot"></span></button>
+          <button class="nav-item" data-view="progress"><span class="nav-icon" data-icon="trend-up"></span><span>Progress</span></button>
+        </nav>
+
+        <div class="sidebar-section-label second-label">ACCOUNT</div>
+        <nav class="side-nav">
+          <button class="nav-item" data-view="profile"><span class="nav-icon" data-icon="user-round"></span><span>My profile</span></button>
+          <button class="nav-item" data-action="open-settings"><span class="nav-icon" data-icon="settings-2"></span><span>Settings</span></button>
+          <button class="nav-item theme-toggle-item" data-action="toggle-theme"><span class="nav-icon" data-theme-icon></span><span data-theme-label>Dark mode</span></button>
+        </nav>
+
+        <div class="sidebar-spacer"></div>
+        <div class="sidebar-help">
+          <div class="help-sparkle"><span data-icon="message-circle"></span></div>
+          <strong>Need a little help?</strong>
+          <p>Ask your coach anything about your next meal.</p>
+          <button class="text-button light" data-view="coach">Chat with Coach <span data-icon="arrow-up-right"></span></button>
+        </div>
+        <div class="user-mini">
+          <div class="avatar avatar-sm">A</div>
+          <div class="user-mini-copy"><strong id="sidebar-name">Alex</strong><span>Filipino-friendly plan</span></div>
+          <button class="icon-button subtle" aria-label="Open profile" data-view="profile"><span data-icon="more-horizontal"></span></button>
+        </div>
+      </aside>
+
+      <main class="main-content">
+        <header class="topbar">
+          <button class="mobile-menu icon-button" aria-label="Open menu" data-action="toggle-sidebar"><span data-icon="menu"></span></button>
+          <div class="topbar-context">
+            <span class="eyebrow" id="topbar-eyebrow">YOUR DAILY SPACE</span>
+            <span class="topbar-date" id="topbar-date">Thursday, October 1, 2026</span>
+          </div>
+          <div class="topbar-actions">
+            <button class="icon-button notification-button" aria-label="Notifications"><span data-icon="bell"></span><span class="notification-dot"></span></button>
+            <div class="topbar-profile" data-view="profile"><div class="avatar avatar-xs">A</div><span id="topbar-name">Alex</span><span class="chevron" data-icon="chevron-down"></span></div>
+          </div>
+        </header>
+        <div id="view-root" class="page-content"></div>
+      </main>
+    </div>
+
+    <div id="modal-root"></div>
+    <div id="toast-stack" class="toast-stack" aria-live="polite"></div>
+    <script src="app.js"></script>
+  </body>
+</html>
