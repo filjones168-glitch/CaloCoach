@@ -1,0 +1,10 @@
+# Supabase Edge Function configuration for CaloCoach.
+# The functions are public for the current localStorage demo. Keep the provider key
+# in Supabase secrets, never in this repository. When Supabase Auth is connected,
+# change verify_jwt to true for both functions.
+
+[functions.coach]
+verify_jwt = false
+
+[functions.estimate-food]
+verify_jwt = false
